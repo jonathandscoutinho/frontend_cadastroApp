@@ -2,7 +2,7 @@
 
 ![preview](./images/tela.png)
 
-Descrição:
+### Descrição:
 Este é um projeto frontend desenvolvido com HTML, CSS e JavaScript, criado com o objetivo de fornecer uma interface amigável e responsiva para o cadastro de usuários. Através dessa tela, os usuários podem inserir suas informações pessoais e salvar os dados em um servidor por meio de uma conexão com uma API REST.
 
 ### Recursos e Funcionalidades:
