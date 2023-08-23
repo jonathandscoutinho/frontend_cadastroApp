@@ -20,21 +20,29 @@ function cadastrar(){
                 telefone: Itel.value
             })
         })
-        .then(function(res) {console.log(res) })
-        .catch(function(res) {console.log(res) })
-};
-
-function limpar(){
-    Inome.value = "";
-    Iemail.value = "";
-    Isenha.value = "";
-    Itel.value = "";
-};
-
-formulario.addEventListener('submit', function(event) {
-    event.preventDefault();
-
-    cadastrar();
+        .then(function(res) {
+            if (res.ok) {
+                window.alert("Cadastro realizado com sucesso!");
+            } else {
+                console.log("Erro ao cadastrar usuário");
+            }
+        })
+        .catch(function(err) {
+            console.error("Erro na requisição:", err);
+        });
+    }
     
-    limpar();
-});
+    function limpar() {
+        Inome.value = "";
+        Iemail.value = "";
+        Isenha.value = "";
+        Itel.value = "";
+    }
+    
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
+    
+        cadastrar();
+    
+        limpar();
+    });
